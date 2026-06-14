@@ -1,0 +1,9 @@
+{
+  "name": "Link Mitra",
+  "short_name": "Link Mitra",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0B0E14",
+  "theme_color": "#8B5CF6",
+  "icons": []
+}
