@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Link Mitra</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link Mitra</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="logo">🔗</div>
-    <h1>Link Mitra</h1>
-    <p class="subtitle">Your Personal Link Vault</p>
-    <div class="login-card">
-      <h2>Unlock Vault</h2>
-      <input type="password" id="pin" maxlength="6" placeholder="Enter 6 Digit PIN">
-      <button onclick="unlockVault()">Unlock</button>
-      <p id="message"></p>
+
+<div id="loginScreen" class="screen">
+    <div class="card">
+        <h1>🔗 Link Mitra</h1>
+        <p>Your Personal Link Vault</p>
+        <input type="password" id="pinInput" placeholder="Enter PIN">
+        <button onclick="unlockVault()">Unlock Vault</button>
+        <p id="loginMessage"></p>
     </div>
-  </div>
-  <script src="script.js"></script>
+</div>
+
+<div id="appScreen" class="screen hidden">
+    <h1>🔗 Link Mitra</h1>
+
+    <input type="text" id="searchInput" placeholder="Search Links..." onkeyup="renderLinks()">
+
+    <div class="card">
+        <input type="text" id="titleInput" placeholder="Title">
+        <input type="url" id="urlInput" placeholder="URL">
+        <textarea id="noteInput" placeholder="Note (optional)"></textarea>
+        <button onclick="addLink()">Add Link</button>
+    </div>
+
+    <div id="linksContainer"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
