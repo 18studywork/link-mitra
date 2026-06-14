@@ -1,0 +1,10 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0B0E14;color:white;font-family:Inter,sans-serif;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;}
+.container{width:100%;max-width:400px;text-align:center;}
+.logo{font-size:60px;margin-bottom:15px;}
+h1{font-size:32px;margin-bottom:10px;}
+.subtitle{color:#aaa;margin-bottom:30px;}
+.login-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:25px;border-radius:20px;}
+input{width:100%;padding:14px;border:none;border-radius:12px;margin-bottom:15px;font-size:16px;}
+button{width:100%;padding:14px;border:none;border-radius:12px;background:#8B5CF6;color:white;font-size:16px;cursor:pointer;}
+#message{margin-top:15px;color:#F59E0B;}
