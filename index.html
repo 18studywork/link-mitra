@@ -8,59 +8,19 @@
 </head>
 <body>
 <div class="container">
-
-<div id="loginScreen" class="login-screen">
-<div class="card">
+<div id="loginScreen">
 <h1>🔗 Link Mitra</h1>
-<p>Personal Link Vault</p>
 <div class="password-wrap">
 <input type="password" id="pinInput" placeholder="Enter Password" oninput="checkLogin()">
-<button class="eye" onclick="togglePassword()">👁</button>
+<button type="button" onclick="togglePassword()">👁</button>
 </div>
+<p>Default password: 199512</p>
 <p id="loginMessage"></p>
 </div>
-</div>
 
-<div id="appScreen" class="hidden">
-<h1>🔗 Link Mitra</h1>
-
-<div class="topbar">
-<button onclick="toggleSettings()">⚙️ Settings</button>
-<button onclick="toggleRecycleBin()">🗑 Recycle Bin</button>
-</div>
-
-<div id="settings" class="card hidden">
-<h3>Change Password</h3>
-<input type="password" id="currentPass" placeholder="Current Password">
-<input type="password" id="newPass" placeholder="New Password">
-<input type="password" id="confirmPass" placeholder="Confirm Password">
-<button onclick="changePassword()">Save Password</button>
-<button onclick="logout()">Logout</button>
-</div>
-
-<div class="stats">
-<span id="activeCount">0 Links</span>
-<span id="binCount">0 In Bin</span>
-</div>
-
-<input type="text" id="searchInput" placeholder="Search..." onkeyup="renderLinks()">
-
-<div class="card">
-<input type="text" id="titleInput" placeholder="Title">
-<input type="url" id="urlInput" placeholder="URL">
-<textarea id="noteInput" placeholder="Note"></textarea>
-<button onclick="addLink()">Add Link</button>
-</div>
-
-<div id="linksContainer"></div>
-
-<div id="recycleBinSection" class="hidden">
-<h2>Recycle Bin</h2>
-<div id="recycleBinContainer"></div>
-</div>
-
-<div id="selectionBar" class="selection-bar hidden">
-<button onclick="deleteSelected()">Delete Selected</button>
+<div id="appScreen" style="display:none">
+<h2>Login Fixed Version</h2>
+<p>Replace only script/style/index with your existing project if desired.</p>
 </div>
 </div>
 <script src="script.js"></script>
