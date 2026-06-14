@@ -12,9 +12,10 @@
   <div class="card login-card">
     <h1>🔗 Link Mitra</h1>
     <div class="password-row">
-      <input type="password" id="passwordInput" placeholder="Enter Password" onkeyup="checkLogin()">
+      <input type="password" id="passwordInput" placeholder="Enter Password" oninput="checkLogin()">
       <button class="eye-btn" onclick="togglePassword()">👁</button>
     </div>
+    <button onclick="checkLogin()">Unlock Vault</button>
   </div>
 </div>
 
