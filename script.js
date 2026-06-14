@@ -1,30 +1,28 @@
 
-if(!localStorage.getItem('appPassword')) localStorage.setItem('appPassword','199512');
+localStorage.removeItem('loggedIn');
+
+if(!localStorage.getItem('appPassword')){
+  localStorage.setItem('appPassword','199512');
+}
 
 function togglePassword(){
- let i=document.getElementById('passwordInput');
- i.type=i.type==='password'?'text':'password';
+ const input=document.getElementById('passwordInput');
+ input.type=input.type==='password'?'text':'password';
 }
 
 function showApp(){
- loginScreen.classList.add('hidden');
- appScreen.classList.remove('hidden');
+ document.getElementById('loginScreen').classList.add('hidden');
+ document.getElementById('appScreen').classList.remove('hidden');
  renderLinks();
 }
 
 function checkLogin(){
- if(passwordInput.value===localStorage.getItem('appPassword')){
-   localStorage.setItem('loggedIn','true');
+ if(document.getElementById('passwordInput').value===localStorage.getItem('appPassword')){
    showApp();
  }
 }
 
-if(localStorage.getItem('loggedIn')==='true'){
- window.onload=showApp;
-}
-
 function logout(){
- localStorage.removeItem('loggedIn');
  location.reload();
 }
 
@@ -90,6 +88,7 @@ function renderLinks(){
 
  let q=(searchInput.value||'').toLowerCase();
  linksContainer.innerHTML='';
+
  getLinks().filter(l=>JSON.stringify(l).toLowerCase().includes(q)).forEach(l=>{
  linksContainer.innerHTML+=`<div class="link-card">
  <input class="selector" type="checkbox" value="${l.id}" onchange="updateSelectionBar()" style="width:auto">
