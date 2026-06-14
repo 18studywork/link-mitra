@@ -1,44 +1,7 @@
-body{
-background:#0B0E14;
-color:white;
-font-family:Arial,sans-serif;
-padding:20px;
-margin:0;
-}
-.hidden{display:none;}
-.card{
-background:#161B22;
-padding:15px;
-border-radius:12px;
-margin-bottom:15px;
-}
-input,textarea,button{
-width:100%;
-padding:12px;
-margin-top:10px;
-border:none;
-border-radius:8px;
-box-sizing:border-box;
-}
-button{
-background:#8B5CF6;
-color:white;
-cursor:pointer;
-}
-.link-card{
-background:#161B22;
-padding:15px;
-border-radius:12px;
-margin-bottom:12px;
-}
-.actions{
-display:flex;
-gap:8px;
-margin-top:10px;
-}
-.actions button{
-flex:1;
-}
-small{
-color:#bbb;
-}
+body{background:#0B0E14;color:#fff;font-family:Arial,sans-serif;padding:20px}
+input,textarea,button{width:100%;padding:12px;margin:6px 0;border-radius:8px;border:none;box-sizing:border-box}
+button{background:#8B5CF6;color:#fff;cursor:pointer}
+.card,.link-card{background:#161B22;padding:15px;border-radius:12px;margin:10px 0}
+.actions{display:flex;gap:8px}.actions button{flex:1}
+.hidden{display:none}.toolbar{display:flex;gap:10px;margin:10px 0}.toolbar button{flex:1}
+small{color:#bbb}

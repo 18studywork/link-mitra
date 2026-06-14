@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Link Mitra</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<h1>🔗 Link Mitra</h1>
 
-<div id="loginScreen" class="screen">
-    <div class="card">
-        <h1>🔗 Link Mitra</h1>
-        <p>Your Personal Link Vault</p>
-        <input type="password" id="pinInput" placeholder="Enter PIN">
-        <button onclick="unlockVault()">Unlock Vault</button>
-        <p id="loginMessage"></p>
-    </div>
+<div class="stats">
+<span id="activeCount">0 Links</span> |
+<span id="binCount">0 In Bin</span>
 </div>
 
-<div id="appScreen" class="screen hidden">
-    <h1>🔗 Link Mitra</h1>
+<input type="text" id="searchInput" placeholder="Search Links..." onkeyup="renderLinks()">
 
-    <input type="text" id="searchInput" placeholder="Search Links..." onkeyup="renderLinks()">
+<div class="card">
+<input type="text" id="titleInput" placeholder="Title">
+<input type="url" id="urlInput" placeholder="URL">
+<textarea id="noteInput" placeholder="Note (optional)"></textarea>
+<button onclick="addLink()">Add Link</button>
+</div>
 
-    <div class="card">
-        <input type="text" id="titleInput" placeholder="Title">
-        <input type="url" id="urlInput" placeholder="URL">
-        <textarea id="noteInput" placeholder="Note (optional)"></textarea>
-        <button onclick="addLink()">Add Link</button>
-    </div>
+<div class="toolbar">
+<button onclick="deleteSelected()">Delete Selected</button>
+<button onclick="toggleRecycleBin()">🗑 Recycle Bin</button>
+</div>
 
-    <div id="linksContainer"></div>
+<div id="linksContainer"></div>
+
+<div id="recycleBinSection" class="hidden">
+<h2>🗑 Recycle Bin</h2>
+<div id="recycleBinContainer"></div>
 </div>
 
 <script src="script.js"></script>
