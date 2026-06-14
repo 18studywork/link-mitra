@@ -1,14 +1,17 @@
-body{background:#0B0E14;color:#fff;font-family:Arial,sans-serif;margin:0;padding:20px}
-.container{max-width:900px;margin:auto}
-.card,.link-card{background:#161B22;padding:15px;border-radius:12px;margin:12px 0}
-input,textarea,button{width:100%;padding:12px;border:none;border-radius:8px;box-sizing:border-box;margin:6px 0}
-button{background:#8B5CF6;color:white;cursor:pointer}
+
+body{background:#0B0E14;color:white;font-family:Arial,sans-serif;margin:0;padding:20px}
+.screen{max-width:900px;margin:auto}
 .hidden{display:none}
-.password-wrap{display:flex;gap:8px}
-.password-wrap input{flex:1}
-.eye{width:60px}
-.login-screen{display:flex;justify-content:center;align-items:center;min-height:80vh}
-.topbar,.stats,.actions{display:flex;gap:10px}
-.actions button,.topbar button{flex:1}
+.card,.link-card{background:#161B22;padding:15px;border-radius:16px;margin:12px 0}
+.login-card{max-width:500px;margin:120px auto}
+input,textarea,button{width:100%;padding:12px;border:none;border-radius:10px;box-sizing:border-box}
+textarea{margin-top:8px}
+button{background:#8B5CF6;color:white;cursor:pointer;margin-top:8px}
+.password-row{display:flex;gap:10px}
+.password-row input{flex:1}
+.eye-btn{width:70px}
+.header{display:flex;justify-content:space-between;align-items:center}
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin:15px 0}
+.actions{display:flex;gap:8px;margin-top:10px}
+.actions button{flex:1}
 .selection-bar{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:min(500px,90%)}
-small{color:#bbb}

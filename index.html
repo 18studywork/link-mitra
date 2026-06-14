@@ -7,61 +7,57 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
 
-<div id="loginScreen" class="login-screen">
-  <div class="card">
+<div id="loginScreen" class="screen">
+  <div class="card login-card">
     <h1>🔗 Link Mitra</h1>
-    <p>Default Password: 199512</p>
-    <div class="password-wrap">
-      <input type="password" id="pinInput" placeholder="Enter Password" oninput="checkLogin()">
-      <button type="button" class="eye" onclick="togglePassword()">👁</button>
+    <div class="password-row">
+      <input type="password" id="passwordInput" placeholder="Enter Password" oninput="checkLogin()">
+      <button class="eye-btn" onclick="togglePassword()">👁</button>
     </div>
-    <p id="loginMessage"></p>
   </div>
 </div>
 
-<div id="appScreen" class="hidden">
-<h1>🔗 Link Mitra</h1>
+<div id="appScreen" class="screen hidden">
+  <div class="header">
+    <h1>🔗 Link Mitra</h1>
+    <button onclick="toggleSettings()">⚙️</button>
+  </div>
 
-<div class="topbar">
-<button onclick="toggleSettings()">⚙️ Settings</button>
-<button onclick="toggleRecycleBin()">🗑 Recycle Bin</button>
-</div>
+  <div id="settingsPanel" class="card hidden">
+    <input type="password" id="currentPass" placeholder="Current Password">
+    <input type="password" id="newPass" placeholder="New Password">
+    <input type="password" id="confirmPass" placeholder="Confirm Password">
+    <button onclick="changePassword()">Save Password</button>
+    <button onclick="logout()">Logout</button>
+  </div>
 
-<div id="settings" class="card hidden">
-<h3>Change Password</h3>
-<input type="password" id="currentPass" placeholder="Current Password">
-<input type="password" id="newPass" placeholder="New Password">
-<input type="password" id="confirmPass" placeholder="Confirm Password">
-<button onclick="changePassword()">Save Password</button>
-<button onclick="logout()">Logout</button>
-</div>
+  <div class="card">
+    <input type="text" id="searchInput" placeholder="Search Links..." onkeyup="renderLinks()">
+  </div>
 
-<div class="stats">
-<span id="activeCount">0 Links</span>
-<span id="binCount">0 In Bin</span>
-</div>
+  <div class="card">
+    <input type="text" id="titleInput" placeholder="Title">
+    <input type="url" id="urlInput" placeholder="URL">
+    <textarea id="noteInput" placeholder="Note (optional)"></textarea>
+    <button onclick="addLink()">Add Link</button>
+  </div>
 
-<input type="text" id="searchInput" placeholder="Search Links..." onkeyup="renderLinks()">
+  <div class="toolbar">
+    <span id="activeCount">0 Links</span>
+    <button onclick="toggleBin()">🗑 Recycle Bin (<span id="binCount">0</span>)</button>
+  </div>
 
-<div class="card">
-<input type="text" id="titleInput" placeholder="Title">
-<input type="url" id="urlInput" placeholder="URL">
-<textarea id="noteInput" placeholder="Note (optional)"></textarea>
-<button onclick="addLink()">Add Link</button>
-</div>
+  <div id="linksContainer"></div>
 
-<div id="linksContainer"></div>
+  <div id="binSection" class="hidden">
+    <h2>Recycle Bin</h2>
+    <div id="binContainer"></div>
+  </div>
 
-<div id="recycleBinSection" class="hidden">
-<h2>Recycle Bin</h2>
-<div id="recycleBinContainer"></div>
-</div>
-
-<div id="selectionBar" class="selection-bar hidden">
-<button onclick="deleteSelected()">Delete Selected</button>
-</div>
+  <div id="selectionBar" class="hidden selection-bar">
+    <button onclick="deleteSelected()">Delete Selected</button>
+  </div>
 </div>
 
 <script src="script.js"></script>
